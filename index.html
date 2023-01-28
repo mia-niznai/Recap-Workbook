@@ -1,0 +1,993 @@
+<h1 id="programming-basics-questions">Programming Basics questions</h1>
+<h2 id="data-basics">Data basics</h2>
+<p>:question: <strong>1. What are the differences between objects and arrays? What is the purpose of the object and what is the purpose of the array?</strong></p>
+<ul>
+<li><p>[x] arrays store data in a single variable, whistl objects store anything with characteristics (properties);                         </p>
+</li>
+<li><p>[x] an array is a list of primitives data types (string, number, integer, float, boolean, undefined, null) stored between [ ], whilst an object can be any kind of data (including arrays in JavaScript) with a key and a value, stored between { };</p>
+</li>
+<li><p>[x] you can acces an array&#39;s element by its index, whistl the properties of an object can be called by using dot notation and [] notation;</p>
+</li>
+<li><p>[x] you can add or remove items of an array by using methods (such as: .pop(), .push(), .unshift(), .slice(), etc.), whilst when working with an object you have to acces the keys and values in order to add, remove or modify them;</p>
+</li>
+<li><p>[x] you can delete key.value for an object to delete a property, but if you use <em>delete arr[num]</em> to delete an array&#39;s index you will only get undefined because in this case <em>delete</em> only replaces the value with undefined;</p>
+</li>
+</ul>
+<hr>
+<p>:question: <strong>2. How can you access a key&#39;s value in an object?</strong></p>
+<ul>
+<li><p>if you wish to access a certain value of a certain key, there are more ways:
+:black_nib:</p>
+<ul>
+<li><code>objectName.propertyName</code>;</li>
+<li><code>objectName[&quot;propertyName&quot;]</code>;</li>
+</ul>
+</li>
+<li><p>also, you can acces all keys&#39; values of an object by using Object.values(obj);</p>
+</li>
+</ul>
+<hr>
+<p>-:question: <strong>3. How can you access the first and the last item of an array?</strong></p>
+<ul>
+<li><p>first element of an array is the element with the index 0: arr[0]. Here&#39;s an example of how to get it:
+:black_nib:</p>
+<pre><code>*  `const firstItem = arr[<span class="hljs-number">0</span>]`;
+   `console.log(firstItem)`;
+</code></pre></li>
+<li><p>last element of an array is: <code>arr[arr.length - 1]</code>. One way to get it is this:
+:black_nib:</p>
+<pre><code> * `const lastItem = arr[arr.length - <span class="hljs-number">1</span>]`;
+  `console.log(lastItem)`; 
+</code></pre></li>
+</ul>
+<hr>
+<p>:question: <strong>4. Name all the primitive types in JavaScript.</strong></p>
+<pre><code>The <span class="hljs-keyword">primitive</span><span class="hljs-title"> types</span> in JavaScript are:
+</code></pre><ul>
+<li><p>[x] <strong>Null</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>Undefined</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>Number</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>Boolean</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>BigInt</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>String</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[x] <strong>Symbol</strong>; :ballot_box_with_check:</p>
+</li>
+<li><p>[ ] <del>Object</del>.</p>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="algorithms-basics">Algorithms basics</h2>
+<p>:question: <strong>5. What are the assignment operators? Name some of them.</strong></p>
+<p>   Assignment operators in JavaScript give/ designate/ allocate a specific value to the <strong> left operand</strong> based on the value given on the value given on the <strong>right operand</strong>. </p>
+<p>   Let&#39;s see some examples:</p>
+<p>:black_nib: <code>let x = 23;</code> :heavy_check_mark:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Assignment operator&#39;s name</strong></th>
+<th style="text-align:center"><strong>Shorthand</strong></th>
+<th style="text-align:center"><strong>Expected</strong></th>
+<th style="text-align:center"><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Assignment</td>
+<td style="text-align:center">x = 23</td>
+<td style="text-align:center">x = 23</td>
+<td style="text-align:center">23</td>
+</tr>
+<tr>
+<td style="text-align:center">Addition assignment</td>
+<td style="text-align:center">x += 23</td>
+<td style="text-align:center">x = x + 23</td>
+<td style="text-align:center">46</td>
+</tr>
+<tr>
+<td style="text-align:center">Substraction assignment</td>
+<td style="text-align:center">x-= 23</td>
+<td style="text-align:center">x = x-23</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">Multiplication assignment</td>
+<td style="text-align:center">x* = 23</td>
+<td style="text-align:center">x = x * 23</td>
+<td style="text-align:center">529</td>
+</tr>
+<tr>
+<td style="text-align:center">Division assignment</td>
+<td style="text-align:center">x/=23</td>
+<td style="text-align:center">x = x / 23</td>
+<td style="text-align:center">23 / 23</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="text-align:center">Remainder assignment</td>
+<td style="text-align:center">x%23</td>
+<td style="text-align:center">x = x % 23</td>
+<td style="text-align:center">23 % 23</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="text-align:center">Exponentiation assignment</td>
+<td style="text-align:center">x** = 23</td>
+<td style="text-align:center">23 = 23 ** 23</td>
+<td style="text-align:center">(Math.pow(23,23))</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>:question: <strong>6. What are the arithmetic operators? Name some of them.</strong>
+    An arithmetic operator establishes the operation between two operands.
+    Let&#39;s see the arithmetic operators. In our case, the operands will be <code>a</code> and <code>b</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Arithmetic operator</strong></th>
+<th style="text-align:center"><strong>Description</strong></th>
+<th style="text-align:center"><strong>Operation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">addition</td>
+<td style="text-align:center">a + b</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">substraction</td>
+<td style="text-align:center">a - b</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">multiplication</td>
+<td style="text-align:center">a * b</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">division</td>
+<td style="text-align:center">a / b</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">modulus (remainder)</td>
+<td style="text-align:center">a % b</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">exponentiation</td>
+<td style="text-align:center">a ** b = (Math.pow(a,b))</td>
+</tr>
+<tr>
+<td style="text-align:center">++</td>
+<td style="text-align:center">increment</td>
+<td style="text-align:center">+1</td>
+</tr>
+<tr>
+<td style="text-align:center">--</td>
+<td style="text-align:center">decrement</td>
+<td style="text-align:center">-1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>:question: <strong>7. What are the comparison operators? Name some of them.</strong></p>
+<ul>
+<li>Comparison operators determine differences or equality between values or variables. 
+  Here are some examples:</li>
+</ul>
+<p><code>let x = 16;</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Comparison operator</strong></th>
+<th style="text-align:center"><strong>Description</strong></th>
+<th style="text-align:center"><strong>Comparison</strong></th>
+<th style="text-align:center"><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">===</td>
+<td style="text-align:center">equal value and equal type</td>
+<td style="text-align:center">16 === &quot;16&quot;</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:center">equal to</td>
+<td style="text-align:center">16 == &quot;16&quot;</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">greater than</td>
+<td style="text-align:center">16 &gt; 28</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">less than</td>
+<td style="text-align:center">16 &lt; 23</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">greater than or equal to</td>
+<td style="text-align:center">16 &gt;= 11</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">less than or equal to</td>
+<td style="text-align:center">16 &lt;= 16</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">not equal</td>
+<td style="text-align:center">16 != &quot;16&quot;</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td style="text-align:center">!==</td>
+<td style="text-align:center">not equal value and type</td>
+<td style="text-align:center">16 !== &quot;16&quot;</td>
+<td style="text-align:center">true</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>:question: <strong>8. What are the logical operators? Name some of them.</strong></p>
+<ul>
+<li>Logical operators help you write complex conditional statements.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Logical operator</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example 1</strong></th>
+<th><strong>Example 2</strong></th>
+<th><strong>Order of operations</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! NOT</td>
+<td>reduce a value to boolean and reverse it</td>
+<td>!false == true</td>
+<td>if(isSaturday = true){!isSaturday == false}</td>
+<td>first</td>
+</tr>
+<tr>
+<td>&amp;&amp; AND</td>
+<td>if at least one of the operands is true, statement is true</td>
+<td>false \</td>
+<td>\</td>
+<td>true  returns true</td>
+<td>false \</td>
+<td>\</td>
+<td>false returns false</td>
+<td>second</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\</td>
+<td>OR</td>
+<td>returns true only if all operands are true</td>
+<td>true &amp;&amp; true returns true</td>
+<td>any combination with false returns false</td>
+<td>third</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>:question: <strong>9. What is the difference between <code>for</code>, <code>for of</code> and <code>for in</code>?</strong></p>
+<ul>
+<li><p><em>for</em>, <em>for...in</em> and <em>for...of</em> statements (loops) are used in different circumstances to iterate over enumerable components of an object; </p>
+</li>
+<li><p><em>for</em> and <em>for...in</em> loops only iterate over enumerable string properties of an object&#39;s values, whistl <em>for...of</em> statement loops over iterable data structures like: arrays, strings, Map, Set, Node lists, etc.;</p>
+</li>
+<li><p><em>for...in</em> loops through arrays and objects, while <em>for...of</em> only loops through arrays, Map, Set, arguments object;</p>
+</li>
+<li><p><em>for...in</em> iterates over property names, while <em>for...of</em> iterates over property values;</p>
+</li>
+<li><p>in general, it might be best that you use <em>for...of</em> for arrays, <em>for...in</em> for objects and <em>for</em>/<em>forEach</em> to acces indexes of arrays;</p>
+</li>
+<li><p><em>for...in</em> supports control flow in the loop body (<em>continue</em>, <em>break</em>, etc.);</p>
+</li>
+<li><p>the <em>for</em> loop is the oldest and most widely supported JavaScript loop, but it is better to use the other loops instead, when appropriate</p>
+</li>
+</ul>
+<hr>
+<p>:question: <strong>10. How do you find the average of values in an array if you can’t use any built-in functions or methods?</strong></p>
+<ul>
+<li>sum of the values of the array and divide the sum by the length of the array, like this:
+:black_nib:<pre><code>  `<span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]`;
+  `<span class="hljs-keyword">let</span> average = <span class="hljs-number">0</span>`;
+      `for(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++){`
+          `average += arr[i]/arr.length`
+      `};`
+</code></pre></li>
+</ul>
+<hr>
+<hr>
+<h2 id="function-basics">Function basics</h2>
+<p>:question: <strong>11. What are the main parts of a function?</strong></p>
+<ul>
+<li><p>an (optional) name - the function can also be anonymous;</p>
+</li>
+<li><p>one or more parameters (when defining/declaring the function) or arguments (when calling/invoking the function), separated by coma and enclosed into round parantheses;</p>
+</li>
+<li><p>the function body or content is a sequence of statements that define the function, enclosed between curly brackets.</p>
+</li>
+</ul>
+<hr>
+<p>:question: <strong>12. What is the difference between parameters and arguments?</strong></p>
+<ul>
+<li>parameters are variables <em>passed</em> into a function when declaring/defining the function, whistl arguments are variables <em>imported</em> into a function when calling/invoking the function.</li>
+</ul>
+<hr>
+<p>:question: <strong>13. What are the differences between function expression and function statement?</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Differences</th>
+<th style="text-align:center"><strong>Function statement</strong> (F.D.)</th>
+<th style="text-align:center"><strong>Function expression</strong> (F.E.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Syntax</em></td>
+<td style="text-align:center">function add(a,b){return a + b} /  const add = (a,b) =&gt; {return a+b}</td>
+<td style="text-align:center">let sum = function(a,b){return a+b};   <del>let sum = add(a,b)</del></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Name</em></td>
+<td style="text-align:center">must have a function name</td>
+<td style="text-align:center">similar to the declaration, but without the function name</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Variable assignment</em></td>
+<td style="text-align:center">does not require</td>
+<td style="text-align:center">can be stored in a variable assignment</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Moment of execution</em></td>
+<td style="text-align:center">before any other code</td>
+<td style="text-align:center">loads and executes only when its line of code is reached</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Hoisting</em></td>
+<td style="text-align:center">hoisted (can be used  before  it is defined)</td>
+<td style="text-align:center">not hoisted (loads only when the interpreter  reaches the definition of the function)</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Moment to access</em></td>
+<td style="text-align:center">the function in the F.D. can be accessed before and after function definition</td>
+<td style="text-align:center">the function in the function F.E. can only be accesed after function definition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h2 id="oop-basics">OOP Basics</h2>
+<p>:question: <strong>14. What is a method?</strong></p>
+<ul>
+<li>A JavaScript <em>method</em> is an action that can be performed on an object by a function, meaning it is an <em>object property that has a function value</em>.</li>
+<li>According to <a href="https://developer.mozilla.org/en-US/docs/Glossary/Method">MDM web docs</a>, <blockquote>
+<p>a method is a function which is the property of an object.</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>:question: <strong>15. Name 3 builtin functions (and/or methods) regarding strings.</strong></p>
+<pre><code>Let<span class="hljs-symbol">'s</span> list <span class="hljs-keyword">some</span> methods <span class="hljs-keyword">for</span> strings:
+</code></pre><ul>
+<li>[x] .concat(); :ballot_box_with_check:</li>
+<li>[x] .toUpperCase(), .toLowerCase(); :ballot_box_with_check:</li>
+<li>[x] .substring() :ballot_box_with_check:</li>
+<li>[x] .substr() :ballot_box_with_check:</li>
+<li>[x] .split() :ballot_box_with_check:</li>
+<li>[x] .charAt() :ballot_box_with_check:</li>
+<li>[x] .indexOf() lastIndexOf(); :ballot_box_with_check:</li>
+<li>[x] .search() :ballot_box_with_check:</li>
+<li>[X] .match :ballot_box_with_check:</li>
+</ul>
+<hr>
+<p>:question: <strong>16. Name 3 builtin functions (and/or methods) regarding arrays.</strong></p>
+<pre><code>Some build-<span class="hljs-keyword">in</span> <span class="hljs-built_in">functions</span> used <span class="hljs-keyword">for</span> <span class="hljs-built_in">arrays</span>:
+</code></pre><ul>
+<li>.pop(); :ballot_box_with_check:</li>
+<li>.shift(), .unshift(); :ballot_box_with_check:</li>
+<li>.length; :ballot_box_with_check:</li>
+<li>concat(); :ballot_box_with_check:</li>
+<li>.splice(); :ballot_box_with_check:</li>
+<li>.slice(); :ballot_box_with_check:</li>
+<li>.toString(); :ballot_box_with_check:</li>
+<li>.sort(); :ballot_box_with_check:</li>
+<li>.reverse(); :ballot_box_with_check:</li>
+</ul>
+<hr>
+<p>:question: <strong>17. Name 3 builtin functions (and/or methods) regarding numbers.</strong></p>
+<ul>
+<li>Math.max(); :ballot_box_with_check:</li>
+<li>Math.min(); :ballot_box_with_check:</li>
+<li>Math.random(); :ballot_box_with_check:</li>
+<li>sort(); :ballot_box_with_check:</li>
+<li>toString(); :ballot_box_with_check:</li>
+<li>ValueOf(); :ballot_box_with_check:</li>
+<li>parseFloat(); :ballot_box_with_check:</li>
+</ul>
+<hr>
+<hr>
+<h2 id="fp-basics">FP Basics</h2>
+<p>:question: <strong>18. What is a callback function?</strong></p>
+<ul>
+<li>A callback function is passed as an argument to another function and will be executed in the order it&#39;s been called.</li>
+</ul>
+<hr>
+<p>:question: <strong>19. What are the differences between <code>for</code> loops and <code>forEach</code>?</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Differences</strong></th>
+<th style="text-align:center"><strong>for loop</strong></th>
+<th style="text-align:center"><strong>forEach loop</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Syntax</em></td>
+<td style="text-align:center"><code>for(let i =0; i &lt;=5; i++){ console.log(i)}</code></td>
+<td style="text-align:center"><code>let numbers = [1, 2, 3, 4, 5]; numbers.forEach(number, index, array) =&gt; {console.log(number)});</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Description</em></td>
+<td style="text-align:center">older, faster, harder to follow</td>
+<td style="text-align:center">newer, slower, easier to follow</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Parameters</em></td>
+<td style="text-align:center">initialization, condition, increment</td>
+<td style="text-align:center">element, index, array</td>
+</tr>
+<tr>
+<td style="text-align:center">Acceptance of <code>break</code>, <code>await</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">no</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="file-basics">File basics</h2>
+<p>:question: <strong>20. What is the difference between JavaScript data structures and JSON data structures?</strong></p>
+<ul>
+<li>JS data structures include objects and arrays, which can contain any kind of data (numbers, booleans, etc.), even other objects and arrays. </li>
+<li>JSON data structures (JavaScript Object Notation) are a subset of JS data structures, easy to read for humans and easy to parse and generate by computers, used to send data between a server and a web app.</li>
+</ul>
+<hr>
+<p>:question: <strong>21. How do you create JavaScript data structure from a JSON file&#39;s data?</strong></p>
+<ul>
+<li>In order to create a JavaScript data structure from a JSON file&#39;s data, you need to use <code>JSON.parse()</code> - a method to parse a JSON string into a JS array or object.</li>
+</ul>
+<hr>
+<h2 id="view-basics">View Basics</h2>
+<p>:question: <strong>22. What is the difference between JavaScript data structures and DOM (HTML document) data structures?</strong></p>
+<ul>
+<li>JS data structures include any kind of data and are used to store and manipulate these data into a JS program, whistl DOM (Document Object Model) is an interface that allows JS to manipulate the structure, content and style of HTML and XML documents.</li>
+</ul>
+<hr>
+<p>:question: <strong>23. What are the steps of changing a HTML element&#39;s content with JavaScript?</strong></p>
+<ul>
+<li>First, you need to select the element. You can do that either with <code>document.getElementById()</code>, either with <code>querySelector</code> or <code>querySelectAll</code> or <code>getElementsByClassName()</code>.</li>
+<li>Then, you can change the content of the element with <code>innerHTML</code> or <code>textContent</code> or <code>innerText</code>. Another way to change the content of the element would be to replace (<code>replaceWith</code>) the element with a new created one.</li>
+</ul>
+<hr>
+<h2 id="event-basics">Event basics</h2>
+<p>:question: <strong>24. What is an event listener?</strong></p>
+<ul>
+<li><p>An event listener is a JS function which makes a specific event to occur on a HTML element and allows a web page to respond to user&#39;s interaction.</p>
+<pre><code>                  <span class="hljs-attribute">Example</span>: 
+
+<span class="moonscript">  `addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-params">(theEvent)</span> =&gt;</span> {});
+<span class="hljs-function">
+  <span class="hljs-title">onclick</span> = <span class="hljs-params">(theEvent)</span> =&gt;</span> { };`</span>
+</code></pre></li>
+</ul>
+<hr>
+<p>:question: <strong>25. What are the steps of changing a HTML element&#39;s content when the element clicked?</strong></p>
+<ul>
+<li>First, you need to select the element. You can do that either with <code>document.getElementById()</code>, either with <code>querySelector</code> or <code>querySelectAll</code> or <code>getElementsByClassName()</code>.</li>
+<li>The, you have to add an event listener to the element, to listen to the &quot;click&quot; event.</li>
+<li>Inside the event listener, call a function that returns the changed content of the element.<pre><code>          <span class="hljs-keyword">Example</span>:
+</code></pre>  `let demo = document.getElementById(&quot;demo&quot;);
+  demo.addEventListener(&quot;click&quot;, changeContent);
+  changeContent = () =&gt; {<pre><code>  demo<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">"new content"</span>
+</code></pre>  }`</li>
+</ul>
+<hr>
+<p>:question: <strong>26. Inside a <code>click</code> event listener, how can you access the element that has been clicked?</strong></p>
+<ul>
+<li>The element that has been clicked can be accessed using <code>event.target</code> - you can console.log(event.target) inside the event listener.</li>
+</ul>
+<hr>
+<hr>
+<h2 id="design-basics">Design Basics</h2>
+<p>:question: <strong>27. What are the differences between <code>display: block</code> and <code>display: inline</code> CSS properties?</strong></p>
+<ul>
+<li>You can use <code>display: block</code> for block-level elements, such as: div, h1, p, form, section, footer, in order to create a new line after the parent container.</li>
+<li>You can use <code>display: inline</code> or <code>display: inline-block</code> for inline level elements, such as: button, a, img, input, span, em, when you don&#39;t need to create a new line after the element.</li>
+</ul>
+<hr>
+<p>:question: <strong>28. What are the differences between <code>position: relative</code> and <code>position: absolute</code> CSS properties?</strong></p>
+<ul>
+<li>The <code>position: relative</code> property allow the element to be moved with the top, bottom, left, right properties.</li>
+<li>The <code>position: absolute</code> property removes the element from the flow of the document and adds a specific set of coordinates to its position.</li>
+</ul>
+<hr>
+<p>:question: <strong>29. What is the box model, name the CSS properties connecting to it?</strong></p>
+<ul>
+<li>The CSS box model represents the layout of a web page, including margins (margin-top, margin-right, margin-bottom, margin-left), borders (border-top, border-right, border-bottom, border-left), paddings (padding-top, padding-right, padding-bottom, padding-left) and content (height, width).</li>
+</ul>
+<hr>
+<p>:question: <strong>30. What CSS properties affect font and text appearance?</strong></p>
+<ul>
+<li>The CSS properties that affect font and text appearance are:</li>
+<li>[x] font-size: size of text;</li>
+<li>[x] font-style: italic or another;</li>
+<li>[x] text-align: horizontal alignment (left, center, right, justify);</li>
+<li>[x] text-shadow: shadow efect added to the text;</li>
+<li>[x] text-indent: number of spaces before first line of text in block-level element;</li>
+<li>[x] word-spacing: space between words;</li>
+<li>[x] text-decorations: underlines, strikesthrough, etc.</li>
+<li>[x] font-weight: boldness of the text;</li>
+<li>[x] text-transform: lowercase or uppercase;
+etc.</li>
+</ul>
+<hr>
+<p>:question: <strong>31. What are the steps of adding or removing a HTML element&#39;s class name?</strong></p>
+<ul>
+<li>First, select the element with <code>document.querySelector()</code>. Then, use <code>classList.add(&quot;new class&quot;)</code> or <code>classList.remove(&quot;existing class&quot;)</code>. Or you can use <code>classList.toggle()</code> method (adds or removes class name).</li>
+</ul>
+<hr>
+<hr>
+<h2 id="javascript-language-specialties">JavaScript - language specialties</h2>
+<p>:question: <strong>32. Is <code>null</code> an object or a primitive?</strong>
+    <em>Null</em> is a primitive that <em>represents the intentional absence of any object value</em>, according to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null">MDN</a>.</p>
+<hr>
+<p>:question: <strong>33. What is <code>undefined</code>?</strong>
+    <em>Undefined</em> is a primitive that indicates a variable without an assigned value or a variable that has not been declared.</p>
+<hr>
+<p>:question: <strong>34. What does it mean that a data type is mutable and what does it mean that it is immutable? Mention some examples.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Differences</strong></th>
+<th style="text-align:center"><strong>Mutable</strong></th>
+<th style="text-align:center"><strong>Immutable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Data type</em></td>
+<td style="text-align:center">arrays, objects, functions</td>
+<td style="text-align:center">primitives</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Meaning</em></td>
+<td style="text-align:center">can be changed without creating an entire new value; a JavaScript object can become immutable if you use <code>object.freeze()</code></td>
+<td style="text-align:center">cannot be changed, but its variable can be assigned another value (except for const)</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Advantages</em></td>
+<td style="text-align:center">more flexibility</td>
+<td style="text-align:center">higher performance, less memory use, consistency</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Examples</em></td>
+<td style="text-align:center">let name = Mia; let name2 = Maira;</td>
+<td style="text-align:center">let person = {name: &quot;Mia&quot;, age: 33}; let person2 = {...person}; person2.name = &quot;Maira&quot;;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>:question: <strong>35. What does it mean that a data type is passed by value and what does it mean that it is passed by reference? Mention some examples.</strong></p>
+<ul>
+<li><p>When a variable is passed to a function by value, it means that the original variable outside the function will not be affected (updated/modified), but only the copy of it.
+Example:</p>
+<pre><code>  let <span class="hljs-keyword">number</span> = <span class="hljs-number">1</span>;
+  addOne = (<span class="hljs-keyword">value</span>) =&gt; {
+  <span class="hljs-keyword">value</span>++;
+  };
+  addOne(<span class="hljs-keyword">number</span>);
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-keyword">number</span>); //<span class="hljs-keyword">number</span> is still <span class="hljs-number">1</span>
+</code></pre></li>
+<li><p>When a variable is passed to a function by reference or type, the original variable outside the function will be changed (updated/modified) according to the modifications made by the function.
+Example:</p>
+<pre><code>  `<span class="javascript"></span>``<span class="javascript">
+  <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+  addOne = <span class="hljs-function">(<span class="hljs-params">array</span>) =&gt;</span> {
+      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt; array.length; i++){
+          array[i]++
+      }
+  }
+  addOne(arr);
+  <span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// output: [2,3,4]</span>
+  </span>``<span class="javascript"></span>`
+</code></pre></li>
+</ul>
+<hr>
+<p>:question: <strong>36. When to use <code>var</code>, <code>let</code>, and <code>const</code>?</strong></p>
+<ul>
+<li><p><code>var</code> is an older version for initializing a variable; it is still used to declare local variable inside functions or globally-scoped; can be re-declare and updated;</p>
+</li>
+<li><p><code>let</code> is a modern alternative for <code>var</code> to declare a variable; can be updated, but not re-defined; it is block-scoped;</p>
+</li>
+<li><p><code>const</code> declaration of an object cannot be changed, but the object&#39;s properties can be updated; it is block-scoped.</p>
+</li>
+</ul>
+<hr>
+<p>:question: <strong>37. What is hoisting?</strong></p>
+<ul>
+<li>Hoisting* consists in moving all the JavaScript declarations to the top of the scope (current script/ current function). </li>
+</ul>
+<hr>
+<hr>
+<h2 id="git">Git</h2>
+<p>:question: <strong>38. What are the advantages of using a version control system?</strong></p>
+<ul>
+<li>The advantages of using a version control system, such as Git, are: trackability of changes, collaboration, branching, merging, back-up, eficiency, etc.</li>
+</ul>
+<hr>
+<p>:question: <strong>39. What’s the difference between Git and GitHub?</strong></p>
+<ul>
+<li>Git is a version control system, whistl Github is a web platform that host repositories.</li>
+</ul>
+<hr>
+<p>:question: <strong>40. What are remote repositories in Git?</strong></p>
+<ul>
+<li>A remote repository is stored online (on a server) and can be accesed by multiple persons, in order to be able to collaborate.</li>
+</ul>
+<hr>
+<p>:question: <strong>41. Why does a merge conflict occur?</strong></p>
+<ul>
+<li>Merging conflicts can occur when more people are using different branches on Git in order to make different updates to a code and Git cannot automatically merge those branches, because it needs to know which changes to keep and which not.</li>
+</ul>
+<hr>
+<hr>
+<h2 id="terminal">Terminal</h2>
+<p>:question: <strong>42. How do you run a JavaScript file in the terminal?</strong></p>
+<ul>
+<li>You use the command <code>node</code> followed by the JS file name (for example, node index.js) and then you press enter. </li>
+</ul>
+<hr>
+<p>:question: <strong>43. How do you stop a running a command in the terminal?</strong></p>
+<ul>
+<li>Control+C or Control+break stops the running command.</li>
+</ul>
+<hr>
+<p>:question: <strong>44. How go you get the previous command in the terminal?</strong></p>
+<ul>
+<li>You get the previous command in the terminal by pressing the <code>up arrow key</code>.</li>
+</ul>
+<hr>
+<p>:question: <strong>45. How do you get to the current directory&#39;s parent directory in the terminal?</strong></p>
+<ul>
+<li>To get to the current directory&#39;s parent directory in the terminal, use the command cd followed by space and two dots (<code>cd ..</code>).</li>
+</ul>
+<p><strong>Resources:</strong></p>
+<p><a href="https://journey.study/v2/learn/courses/1252/modules/13402/units/3/materials/19252">Logical operators</a> </p>
+<p><a href="https://www.tablesgenerator.com/markdown_tables">Markdown table generator</a> </p>
+<p><a href="https://stackabuse.com/working-with-javascripts-built-in-string-functions/">StackAbuse</a></p>
+<h2 id="the-old-version-of-the-workbook">The old version of the Workbook</h2>
+<h2 id="programming-basics-questions">Programming Basics Questions</h2>
+<h2 id="computer-science">Computer science</h2>
+<h3 id="data-structures">Data structures</h3>
+<p><strong>1. What is the purpose of a list (array in some programming languages) data structure? Name some methods of it!</strong></p>
+<ul>
+<li>An array (list) stores any kind of data in a linear order, so that the items can be easily manipulated. 
+Examples for some methods of arrays:
+[x] .pop(),
+[x] .push(),
+[x] .unshift(),
+[x] .slice(),
+[x] .append(),
+[x] .extend(),
+[x] .insert(),
+[x] .remove()
+etc.</li>
+</ul>
+<hr>
+<p><strong>2. What is the difference between a list/array and a set?</strong></p>
+<ul>
+<li>An array (list) is an ordered collection of items that can be accesses using index, can have duplicate elements and can have mutable elements (that can be added, deleted or moved around).</li>
+<li>A set is an unordered collection of unique and immutable items (can&#39;t be changed once they&#39;ve been assigned).</li>
+</ul>
+<hr>
+<p><strong>3. What is the purpose and methods of a dictionary/map data structure?</strong></p>
+<ul>
+<li>Dictionary/ map data structure stores a collection or an array of keys and values (in pairs, each key is associated with a value). Using dictionary/ map data structure is easier to store, acces and manipulate data.</li>
+<li>Some methods of a dictionary are: <em>items()</em>, <em>keys()</em>, <em>values()</em>, <em>get()</em> and <em>popitem()</em>.</li>
+</ul>
+<h2 id="___">___</h2>
+<h3 id="algorithms">Algorithms</h3>
+<p><strong>4. Fibonacci sequences. Write a method (or pseudo code), that generates the Fibonacci sequences.</strong></p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateFib</span><span class="hljs-params">(x)</span> {</span>
+  let fibo = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]; 
+  <span class="hljs-keyword">for</span> (let <span class="hljs-built_in">i</span> = <span class="hljs-number">2</span>; <span class="hljs-built_in">i</span> &lt; x; <span class="hljs-built_in">i</span>++) {
+    fib.push(fibo[i - <span class="hljs-number">1</span>] + fibo[i - <span class="hljs-number">2</span>]); 
+  }
+  <span class="hljs-keyword">return</span> fibo;
+}
+</code></pre><hr>
+<p><strong>5. How do you find a max value in a list/array if you can’t use any built-in functions?</strong></p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span></span> findMax(arr) {
+    let <span class="hljs-built_in">maxVal</span> = arr[<span class="hljs-number">0</span>]; 
+    for (let i = <span class="hljs-number">1</span>; i &lt; arr.length; i++) {
+        <span class="hljs-keyword">if</span> (arr[i] &gt; <span class="hljs-built_in">maxVal</span>) {
+            <span class="hljs-built_in">maxVal</span> = arr[i]; // Update the maximum <span class="hljs-keyword">value</span> <span class="hljs-keyword">if</span> a larger <span class="hljs-keyword">value</span> is found
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">maxVal</span>;
+}
+</code></pre><hr>
+<p><strong>6. How do you find the average of values in a list/array if you can’t use any built-in functions?</strong></p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">average</span><span class="hljs-params">(arr)</span> {</span>
+    let sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (let <span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">i</span> &lt; arr.<span class="hljs-built_in">length</span>; <span class="hljs-built_in">i</span>++) {
+        sum += arr[i];
+    }
+    <span class="hljs-keyword">return</span> sum / arr.<span class="hljs-built_in">length</span>;
+}
+</code></pre><hr>
+<p><strong>7. What do we call an <em>in-place</em> sort?</strong></p>
+<ul>
+<li>An in-place sort is an algorithm to sort the elements of an array using the same memory space to store them, instead of creating a new copy. It updates a given list in-place (it changes the actual list on the spot, not returning a new one).</li>
+</ul>
+<hr>
+<p><strong>8. Explain an algorithm which sorts a list!</strong></p>
+<pre><code>finished = <span class="hljs-literal">False</span>                    # declare a <span class="hljs-built_in">boolean</span> <span class="hljs-keyword">variable</span> <span class="hljs-keyword">to</span> check <span class="hljs-keyword">if</span> we finished sorting the list
+list_length = len(a_list)           # get the number <span class="hljs-keyword">of</span> items <span class="hljs-keyword">in</span> a list so that we don<span class="hljs-symbol">'t</span> call len() <span class="hljs-keyword">for</span> each iteration
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> finished:                 # we keep looping <span class="hljs-keyword">until</span> we finished sorting (finished == <span class="hljs-literal">True</span>)
+    finished = <span class="hljs-literal">True</span>                 # we <span class="hljs-keyword">assume</span> it<span class="hljs-symbol">'s</span> finished (the condition <span class="hljs-keyword">to</span> break <span class="hljs-keyword">out</span> <span class="hljs-keyword">of</span> the <span class="hljs-keyword">while</span> <span class="hljs-keyword">loop</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(list_length - <span class="hljs-number">1</span>):               # iterate through the list without the last item
+        <span class="hljs-keyword">if</span> a_list[i] &gt; a_list[i + <span class="hljs-number">1</span>]:              # <span class="hljs-keyword">if</span> the current item <span class="hljs-keyword">is</span> bigger than the <span class="hljs-keyword">next</span>..
+            a_list[i], a_list[i + <span class="hljs-number">1</span>] = a_list[i + <span class="hljs-number">1</span>], a_list[i]         # we swap them
+            finished = <span class="hljs-literal">False</span>        # keep looping <span class="hljs-keyword">until</span> we have nothing left <span class="hljs-keyword">to</span> swap
+</code></pre><hr>
+<hr>
+<h3 id="programming-paradigms-procedural">Programming paradigms - procedural</h3>
+<p><strong>9. What are the main parts of a function?</strong></p>
+<ul>
+<li>Main parts of a function: <em>parameters</em>, <em>function body</em>, <em>variables</em>, <em>statements</em>, <em>expressions</em>, <em>function call</em> and <em>arguments (input parameters)</em>.</li>
+</ul>
+<h2 id="___">___</h2>
+<h2 id="software-engineering">Software engineering</h2>
+<h3 id="debugging">Debugging</h3>
+<p><strong>10. What does step over, step into and step out mean while using the debugger?</strong></p>
+<ul>
+<li><strong><em>step into</em></strong> A function is about to be invoked and you want to debug into the code of that function, so the next step is to go into that function and continue debugging step-by-step.</li>
+<li><strong><em>step over</em></strong> A function is about to be invoked, but you&#39;re not interested in debugging this particular invocation, so you want the debugger to execute that function completely as one entire step.</li>
+<li><strong><em>step out</em></strong> You&#39;re done debugging this function step-by-step and you just want the debugger to run the entire function until it returns as one entire step.</li>
+</ul>
+<hr>
+<p><strong>11. How can you start to debug a program from a certain line using the debugger?</strong></p>
+<ul>
+<li><ul>
+<li><strong><em>line breakpoint</em></strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="version-control">Version control</h3>
+<h2 id="the-answers-under-this-line-are-written-by-tudor-">THE ANSWERS UNDER THIS LINE ARE WRITTEN BY TUDOR!</h2>
+<h4 id="what-are-the-advantages-of-using-a-version-control-system-">What are the advantages of using a version control system?</h4>
+<ul>
+<li>The primary benefits you should expect from version control are as follows:<ol>
+<li>A complete long-term change history of every file (enables going back to previous versions to help in root cause analysis for bugs and it is crucial when needing to fix problems in older versions of software).</li>
+<li>Branching and merging. Individuals working on their own can benefit from the ability to work on independent streams of changes. There are many different workflows that teams can choose from when they decide how to make use of branching and merging facilities.</li>
+<li>Traceability. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.</li>
+</ol>
+</li>
+</ul>
+<h4 id="what-is-the-difference-between-the-working-directory-the-staging-area-and-the-repository-in-git-">What is the difference between the working directory, the staging area and the repository in git?</h4>
+<ul>
+<li>Git has 3 areas:<ul>
+<li>The <em>working directory</em> = contains the latest downloaded version from the repository together with any changes that have yet to be committed. As you&#39;re working on a project, all changes are made in this working directory.</li>
+<li>The <em>staging area</em> = helps to maintain this workflow by allowing you to only promote certain files at a time instead of all the changes in your working directory. Users move, otherwise referred to as promote, changes from the working directory, to a staging area before committing them into the repository.</li>
+<li>The <em>repository</em> = a virtual storage of your project. It allows you to save versions of your code, which you can access when needed.</li>
+</ul>
+</li>
+</ul>
+<h4 id="what-are-remote-repositories-in-git-">What are remote repositories in git?</h4>
+<ul>
+<li>Remote repositories are versions of your project that are hosted on the Internet or network somewhere. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.</li>
+</ul>
+<h4 id="why-does-a-merge-conflict-occur-">Why does a merge conflict occur?</h4>
+<ul>
+<li>Merge conflicts happen when you merge branches that have competing commits, and Git needs your help to decide which changes to incorporate in the final merge.</li>
+</ul>
+<h4 id="through-what-series-of-commands-could-you-put-a-new-file-into-a-remote-repository-connected-to-your-existing-local-repository-">Through what series of commands could you put a new file into a remote repository connected to your existing local repository?</h4>
+<ul>
+<li>In Terminal, add the URL for the remote repository where your local repository will be pushed:<ul>
+<li>$ git remote add origin remote repository URL # Sets the new remote</li>
+<li>$ git remote -v # Verifies the new remote URL</li>
+</ul>
+</li>
+<li>Push the changes in your local repository to GitHub:<ul>
+<li>$ git push origin master # Pushes the changes in your local repository up to the remote repository you specified as the origin</li>
+</ul>
+</li>
+</ul>
+<h4 id="what-does-it-mean-atomic-commits-and-descriptive-commit-messages-">What does it mean atomic commits and descriptive commit messages?</h4>
+<ul>
+<li>When making code changes, you want to make commits that are generally smaller and that encompass only one irreducible feature, fix, or improvement.</li>
+</ul>
+<h4 id="what-s-the-difference-between-git-and-github-">What’s the difference between git and GitHub?</h4>
+<ul>
+<li>Git is a version control system that lets you manage and keep track of your source code history.</li>
+<li>GitHub is a web-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them.</li>
+</ul>
+<hr>
+<h2 id="software-design">Software design</h2>
+<h3 id="clean-code">Clean code</h3>
+<h4 id="what-does-clean-code-mean-">What does clean code mean?</h4>
+<ul>
+<li>Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.</li>
+</ul>
+<h4 id="what-steps-do-we-usually-do-during-a-clean-code-refactoring-">What steps do we usually do during a clean code refactoring?</h4>
+<ul>
+<li>Read through the whole code.</li>
+<li>Summarize what is the purpose of the script in one sentence.</li>
+<li>Run the code to see what is the end result.</li>
+<li>The code should keep runnable and show the same content when you finish the refactor.</li>
+<li>Run the code frequently to check you are on the right track.</li>
+<li>Actual refactoring:<ul>
+<li>Remove clutter: Clutter is anything in your code that does not add value<ul>
+<li>Format your code</li>
+<li>Delete comments</li>
+</ul>
+</li>
+<li>Remove complexity:<ul>
+<li>bad names</li>
+<li>long methods</li>
+<li>deep conditionals</li>
+<li>improper variable scopes (global, local)</li>
+</ul>
+</li>
+<li>Remove cleverness: If it&#39;s simple and elegant you wouldn&#39;t refer to it as &#39;clever&#39;</li>
+<li>Remove the 3 D&#39;s: duplication, duplication, duplication<ul>
+<li>this can be applied by extracting the duplicated code parts into functions</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="error-handling">Error handling</h3>
+<h4 id="what-is-exception-handling-">What is exception handling?</h4>
+<ul>
+<li><em>Exception handling</em> is a method that handles unexpected errors in a Python program. Instead of letting the error crash our program we can intercept it, do something about it, and allow the program to continue.</li>
+<li>Errors are called exceptions in Python and all exceptions are subclasses of the Exception class.</li>
+</ul>
+<h4 id="what-are-the-basics-of-exception-handling-in-python-">What are the basics of exception handling in Python?</h4>
+<ul>
+<li>The basics of <em>exception handling</em> consist of <em>try-except</em> blocks. Python will try to process all the statements inside the <em>try</em> block.</li>
+<li>If an error occurs at any point as it is executing them, the flow of control will immediately pass to the except block, and any remaining statements in the try block will be skipped.<blockquote>
+<ul>
+<li>It is good practice if the only code inside the try block is the single line that is the potential source of the error that we want to handle.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="in-which-case-should-we-catch-an-exception-why-">In which case should we catch an exception? Why?</h4>
+<ul>
+<li>We should catch an exception when we want to protect small blocks of code against specific errors (better than to wrap large blocks of code and write vague, generic error recovery code).</li>
+<li>We catch exceptions because:<ul>
+<li>Exception handling separates normal code from code that handles errors.</li>
+<li>Exceptions can easily be passed along functions in the stack until they reach a function which knows how to handle them.</li>
+<li>Exceptions come with lots of useful error information built in – for example, they can print a traceback which helps us to see exactly where the error occurred.</li>
+</ul>
+</li>
+</ul>
+<h4 id="what-can-should-we-do-with-an-exception-in-the-except-block-">What can/should we do with an exception in the ‘except’ block?</h4>
+<ul>
+<li>In the ‘except’ block we should write code that the program will execute when there is an exception.</li>
+<li>We can raise exceptions ourselves using the <em>raise</em> statement - perhaps we may want to handle it partially in the current function, but also want to respond to it in the code which called the function.</li>
+<li>We can also write our own custom exception classes which are based on existing exception classes.</li>
+</ul>
+<h4 id="what-does-the-else-and-finally-statement-do-in-a-try-except-block-in-python-">What does the else and finally statement do in a try-except block in Python?</h4>
+<ul>
+<li>The <em>else</em> statement will be executed only if the try clause doesn’t raise an exception.</li>
+<li>The <em>finally</em> clause will be executed at the end of the try-except block no matter what – if there is no exception, if an exception is raised and handled, if an exception is raised and not handled, and even if we exit the block using <em>break</em>, <em>continue</em> or <em>return</em>. We can use the <em>finally</em> clause for cleanup code that we always want to be executed.</li>
+</ul>
+<hr>
+<h2 id="software-development-methodologies">Software Development Methodologies</h2>
+<h4 id="what-is-the-main-goal-of-a-retrospective-meeting-">What is the main goal of a retrospective meeting?</h4>
+<p>According to Agile software development:</p>
+<blockquote>
+<ul>
+<li>A retrospective meeting is a meeting that&#39;s held at the end of a single development cycle, usually measured as one week or two.</li>
+<li>The main goal of the retrospective is to reflect on what happened in the development and identify actions for improvement and going forward.</li>
+<li>Each member of the team members answers the following questions:<ul>
+<li>What worked well for us?</li>
+<li>What did not work well for us?</li>
+<li>What actions can we take to improve our process going forward?</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="programming-environment">Programming environment</h2>
+<h3 id="unix">Unix</h3>
+<h4 id="what-is-unix-and-what-is-linux-">What is UNIX and what is Linux?</h4>
+<ul>
+<li>UNIX is an operating system that was born in the late 1960s, when AT&amp;T Bell Labs released an operating system called Unix written in C, which allows quicker modification, acceptance, and portability. It began as a one-man project under the leadership of Ken Thompson of Bell Labs. It went on to become one of the most widely used operating systems. Unix is a proprietary operating system.</li>
+<li>Linux is a replica of UNIX that does not use its code, built by Linus Torvalds at the University of Helsinki in 1991. The name &quot;Linux&quot; comes from the Linux kernel. It is free and open source software.</li>
+</ul>
+<h4 id="what-do-we-call-the-shell-in-linux-">What do we call the shell in Linux?</h4>
+<ul>
+<li>Shell = command line interpreter</li>
+</ul>
+<h4 id="what-does-root-means-in-a-linux-environment-">What does root means in a Linux environment?</h4>
+<ul>
+<li>Root is the user name or account that by default has access to all commands and files on a Linux or other UNIX-like operating systems. It is also referred to as the <em>root account</em>, <em>root user</em> or the <em>superuser</em>.</li>
+</ul>
+<h4 id="how-do-you-access-your-personal-files-in-linux-">How do you access your personal files in Linux?</h4>
+<ul>
+<li>In Linux, personal data is stored in /home/username folder.</li>
+</ul>
+<h4 id="how-can-you-install-an-application-in-linux-">How can you install an application in Linux?</h4>
+<ul>
+<li>Run the command in the Terminal (text input/output environment):</li>
+</ul>
+<pre><code>sudo apt install <span class="hljs-tag">&lt;<span class="hljs-name">name_of_application</span>&gt;</span>
+</code></pre><h4 id="what-is-package-management-in-linux-what-are-repositories-">What is package management in Linux, what are repositories?</h4>
+<ul>
+<li>Package management system allows users to install, update, remove and get information about software installed.</li>
+<li>Repositories are storage locations where the packages are downloaded from.</li>
+<li>Users can use <em>apt</em> and <em>dpkg</em> commands to query and update the database of software available in repositories and installed on the system, to install or remove software and upgrade installed packages, and clean up obsolete programs.</li>
+</ul>
+<h4 id="how-do-you-navigate-in-the-filesystem-with-the-command-line-">How do you navigate in the filesystem with the command line?</h4>
+<ul>
+<li><em>cd</em> Change directory. Used to navigate between folders.</li>
+<li><em>pwd</em> Display current directory.</li>
+<li><em>ls</em> Display a list of files in the current directory.</li>
+<li><em>stat</em> Display when a file was last accessed, modified, or changed.</li>
+</ul>
+<h4 id="what-does-the-following-commands-do-mkdir-rm-cat-cp-touch-">What does the following commands do: mkdir, rm, cat, cp, touch?</h4>
+<ul>
+<li><em>mkdir</em> Create a directory.</li>
+<li><em>rm</em> Remove a file or set of files.</li>
+<li><em>cat</em> Display the contents of a text file.</li>
+<li><em>cp</em> Makes a copy of a file.</li>
+<li><em>touch</em> Create a file.</li>
+</ul>
+<h4 id="how-can-you-look-up-what-does-a-command-do-in-linux-if-you-have-no-internet-connection-">How can you look up what does a command do in Linux if you have no internet connection?</h4>
+<ul>
+<li><em>command --help</em> or <em>man command</em></li>
+</ul>
+<h4 id="what-does-the-following-commands-do-head-tail-more-less-">What does the following commands do: head, tail, more, less?</h4>
+<ul>
+<li><em>head</em> Output the first 10 lines of file.</li>
+<li><em>tail</em> Output the last 10 lines of file.</li>
+<li><em>more</em> Output the contents of file.</li>
+<li><em>less</em> View and paginate file.</li>
+</ul>
+<h4 id="how-do-you-download-a-file-from-internet-using-the-terminal-">How do you download a file from internet using the terminal?</h4>
+<ul>
+<li><em>wget file</em></li>
+</ul>
+<hr>
