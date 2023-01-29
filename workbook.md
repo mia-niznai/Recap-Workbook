@@ -668,4 +668,69 @@ ___
 * Git commit -m "commit message" - commits the files
 * git push - send the files to the online (remote) repo.
 
+#### What does it mean atomic commits and descriptive commit messages?
+
+* Atomic commit messages are usually grouped around a same idea for the code. You make one commit on a specific topic, not multiple.
+* Descriptive commits describe multiple steps being made to update de project.
+
+#### What’s the difference between git and GitHub?
+
+* Git is a version control system, whistl GitHub is an online platform hosting remote repositories.
+
+## Software design
+
+### Clean code
+
+#### What does clean code mean?
+* Clean code: easy to understand, easy to follow, correct syntax, up-to-date (according to best practices).
+
+#### What steps do we usually do during a clean code refactoring?
+
+[x] read the code carefully and understand every line of the code;
+[x] add comments to explain the code;
+[x] identify ideas to improve/ refactor the code;
+[x] test the possible improvements (one at a time) - with the help of the console/debugger;
+[x] add more comments where needed;
+[x] test and review the code.
+
+### Error handling
+
+#### What is exception handling?
+
+* The coder should be able to anticipate, identify and fix problems, errors and exceptions in the code. Exception/ error handling means to write the code so that, if the execution of a program encounters an error or an exception, it should be handled in a specific manner.
+
+#### In which case should we catch an exception? Why?
+
+* Catching an exception is useful when you want to handle an error in the code.
+
+#### What can/should we do with an exception in the ‘except’ block?
+
+```
+try {
+   // code having an exception
+} catch (exception) {
+   code how to handle the exception
+}
+```
+* You identify the code with the exception and you write the code to handle the exception.
+
+## Software Development Methodologies
+
+#### What is the main goal of a retrospective meeting?
+
+* A retrospective meeting summarizes the progress being made by the team and identifies ways of improving the work of the team in the future.
+
+## Programming environment
+
+### Unix
+
+#### What is UNIX and what is Linux?
+
+* UNIX is a consortium of operating systems.
+* Linux is an open-source operating system developed by Linus Torvalds as a replica for UNIX.
+
+
+
+
+
 
