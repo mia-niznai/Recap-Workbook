@@ -664,5 +664,8 @@ ___
 
 #### Through what series of commands could you put a new file into a remote repository connected to your existing local repository?
 
+* Git add - adds the files in the staging area
+* Git commit -m "commit message" - commits the files
+* git push - send the files to the online (remote) repo.
 
 
