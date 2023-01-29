@@ -644,3 +644,25 @@ ___
 ___
 
 ### Version control
+
+#### What are the advantages of using a version control system?
+* Using a version control system (such as Git) makes it easier to collaborate, back-up, merge projects, work on the same project in different branches, work more efficiently, keep track of the changes being made (and by whom), store an archive of the previous versions of the project.
+
+#### What is the difference between the working directory, the staging area and the repository in git?
+
+* The working directory is the local, work in progress version of the project.
+* The staging area is where the work from the local directory is added (with git add), before being commited (git commit) to the remote repository. 
+* The Git repository is the work commited to Git and stored on an online server.
+
+#### What are remote repositories in git?
+
+* The remote repositories in Git are online versions of the project (stored on an online server).
+
+#### Why does a merge conflict occur?
+
+* Merge conflicts in Git occur when different changes were made on the same line of code in different branches and Git is waiting to be told which changes to keep and which not, in order to merge. The user has to resolve the conflict before merging.
+
+#### Through what series of commands could you put a new file into a remote repository connected to your existing local repository?
+
+
+
