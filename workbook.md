@@ -131,8 +131,8 @@ ___
 | **Logical operator** 	| **Description**                                            	| **Example 1**                  	| **Example 2**                               	| **Order of operations** 	|
 |----------------------	|------------------------------------------------------------	|--------------------------------	|---------------------------------------------	|-------------------------	|
 |     ! NOT            	| reduce a value to boolean and reverse it                   	| !false == true                 	| if(isSaturday = true){!isSaturday == false} 	|         first           	|
-|     && AND           	| if at least one of the operands is true, statement is true 	| false \|\| true  returns true  	| false \|\| false returns false              	|        second           	|
-|      \|\| OR         	| returns true only if all operands are true                 	| true && true returns true      	| any combination with false returns false   	|        third            	|
+|      \|\| OR           	| if at least one of the operands is true, statement is true 	| false \|\| true  returns true  	| false \|\| false returns false              	|        second           	|
+|        && AND      	| returns true only if all operands are true                 	| true && true returns true      	| any combination with false returns false   	|        third            	|
 
 ___
 
